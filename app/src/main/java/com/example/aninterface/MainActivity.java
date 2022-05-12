@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
 
             ImageView iv = new ImageView(this);
             iv.setImageResource(R.drawable.icon);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(150, 150);
-            iv.setPadding(20, 20 ,20 ,20);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(10, 10);
+            iv.setPadding(5, 5 ,5 ,5);
 
             LinearLayout ll_ver = new LinearLayout(this);
             ll_ver.setOrientation(LinearLayout.VERTICAL);
@@ -110,5 +110,10 @@ public class MainActivity extends AppCompatActivity {
 
         MultiAutoCompleteTextView e_text = findViewById(R.id.multiAutoCompleteTextView);
         e_text.setText(list_nites.get(id).text);
+    }
+
+    public void Exit(View view) {
+       setContentView(R.layout.activity_main);
+       onLoad();
     }
 }
